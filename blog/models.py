@@ -27,6 +27,7 @@ class Post(models.Model):
 # Create your models here.
 class Video(models.Model):
     caption = models.CharField(max_length=100)
+    description = models.TextField()
     video = models.FileField(
         upload_to="media/profile_pics", validators=[file_size])
 

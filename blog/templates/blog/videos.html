@@ -17,17 +17,6 @@
     <title>alert/videos.com</title>
   </head>
   <body>
-      {% for x in all %}
-      <h3 class="text-center mt-2 mb-2">{{x.caption}}</h3>
-      <video
-        class="embed-responsive embed-responsive-16by9"
-        controls="controls"
-      >
-        <source src="{{x.video.url}}" type="video/mp4" />
-      </video>
-      {% endfor %}
-    </div>
-
     {% if request.user.is_authenticated %}
     <div class="mt-5">
       <form action="." method="post" enctype="multipart/form-data">
@@ -36,6 +25,23 @@
       </form>
     </div>
     {% endif %}
+
+      {% for x in all %}
+      <div id="delete">
+      <h3 class="text-center mt-2 mb-2">{{x.caption}}</h3>
+      <video
+        class="embed-responsive embed-responsive-16by9"
+        controls="controls"
+      >
+        <source src="{{x.video.url}}" type="video/mp4" />
+      </video>
+      <p>{{x.description}}</p>
+      <button onclick="myFunction()">Remove</button>
+       <div>
+      {% endfor %}
+    
+
+    
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384- 
@@ -54,3 +60,12 @@ DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     ></script>
   </body>
 </html>
+
+
+<script>
+  function myFunction() {
+    const element = document.getElementById("delete");
+    element.remove();
+  }
+  </script>
+  
