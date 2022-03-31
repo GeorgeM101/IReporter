@@ -4,6 +4,7 @@ body {
    background-image: url('https://img.freepik.com/free-photo/businessman-was-negotiating-agreement-which-dollar-was-accepted-as-bribe-corruption-anti-bribery-corruption-concepts_11304-2448.jpg?w=900');
    width: 100vw;
    height: 100vh;
+   margin-top: 5rem;
    background-size: cover;
    background-repeat: no-repeat;
  }
@@ -106,7 +107,7 @@ body {
    margin: 10px 0;
    color: #03e9f4;
    text-decoration: none;
-   text-transform: uppercase;
+   text-transform: capitalize;
    transition: 0.5s;
    letter-spacing: 4px;
    overflow: hidden;

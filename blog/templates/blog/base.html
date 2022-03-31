@@ -59,7 +59,7 @@
                 <span></span>
                 Create Alert
               </a>
-              <a href="" id="auth-links">
+              <a href="{% url 'video'%}" id="auth-links">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -72,6 +72,18 @@
                 <span></span>
                 <span></span>
                 Profile
+              </a>
+
+              <a
+                href="{% url 'profile' %}"
+                id="auth-links"
+                style="text-transform: capitalize"
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Welcome {{user.username}}
               </a>
               <a href="{% url 'logout' %}" id="auth-links">
                 <span></span>
@@ -219,13 +231,13 @@
             <a href="admin/" class="nav-link px-2 text-muted">Admin</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-muted">FAQs</a>
+            <a href="#" class="nav-link px-2 text-muted">Contact-US</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link px-2 text-muted">About</a>
           </li>
         </ul>
-        <p class="text-center text-muted">&copy; IReporter 2021</p>
+        <p class="text-center text-muted">&copy; IReporter 2022</p>
       </footer>
     </main>
 
