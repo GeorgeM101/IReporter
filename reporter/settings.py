@@ -125,6 +125,15 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'georgmboya@gmail.com'
+DISPLAY_NAME = "Google places API demo email"
+DONOT_REPLY_EMAIL_PASSWORD = '3895451700'
+CURRENT_SITE = "localhost:8000"
 
 GOOGLE_API_KEY = 'AIzaSyBalCw-BgaWb7XNf_I6Sc6fR5rL3hqYfIA'
+
 
