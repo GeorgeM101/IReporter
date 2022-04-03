@@ -28,9 +28,8 @@
 
       {% for x in all %}
 
-       {%if forloop.first %}
-       <div class="row">
-         <div class="col-lg-4 col-md-4 col-12"
+      
+      
 
       <div id="delete">
       <h3 class="text-center mt-2 mb-2">{{x.caption}}</h3>
@@ -43,9 +42,7 @@
       <p>{{x.description}}</p>
       <button onclick="myFunction()">Remove</button>
       <div>
-    <div>
-    <div>
-       {% else forloop.last %}
+      
 
      {% endfor %}
     
