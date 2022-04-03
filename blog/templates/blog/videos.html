@@ -27,18 +27,27 @@
     {% endif %}
 
       {% for x in all %}
+
+       {%if forloop.first %}
+       <div class="row">
+         <div class="col-lg-4 col-md-4 col-12"
+
       <div id="delete">
       <h3 class="text-center mt-2 mb-2">{{x.caption}}</h3>
-      <video
+      <video 
         class="embed-responsive embed-responsive-16by9"
         controls="controls"
       >
-        <source src="{{x.video.url}}" type="video/mp4" />
+        <source src="{{x.video.url}}" type="video/mp4"/>
       </video>
       <p>{{x.description}}</p>
       <button onclick="myFunction()">Remove</button>
-       <div>
-      {% endfor %}
+      <div>
+    <div>
+    <div>
+       {% else forloop.last %}
+
+     {% endfor %}
     
 
     
