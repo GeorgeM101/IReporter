@@ -107,7 +107,7 @@ body {
    margin: 10px 0;
    color: #03e9f4;
    text-decoration: none;
-   text-transform: uppercase;
+   text-transform: capitalize;
    transition: 0.5s;
    letter-spacing: 4px;
    overflow: hidden;
@@ -126,18 +126,18 @@ body {
     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 
-#auth-links:nth-child(1){
+/* #auth-links:nth-child(1){
    filter: hue-rotate(270deg);
-}
+} */
 
-#auth-links:nth-child(2){
+/* #auth-links:nth-child(2){
    filter: hue-rotate(110deg);
-}
+} */
 #auth-links span{
    position: absolute;
    display: block;
 }
-#auth-links span:nth-child(1){
+/* #auth-links span:nth-child(1){
    top: 0;
    left: 0;
    width: 100%;
@@ -203,7 +203,7 @@ body {
    50%,100%{
        bottom: 100%;
    }
-}
+} */
 #gist-btn{
    color: black;
    background: linear-gradient(270deg, rgb(247, 0, 255) 0%, rgb(98, 0, 255) 100%);
