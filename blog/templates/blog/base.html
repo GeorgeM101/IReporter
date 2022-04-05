@@ -242,12 +242,12 @@
           </div>
 
           <div class="col-sm-6 col-md-2">
-            <h6>Services</h6>
+            <h6>IReporter& Services</h6>
             <ul>
-              <li><a href="#">Email Marketing</a></li>
-              <li><a href="#">Campaigns</a></li>
-              <li><a href="#">Branding</a></li>
-              <li><a href="#">Offline</a></li>
+              <li><a href="{% url 'blog-home'%}">Home</a></li>
+              <li><a href="{% url 'login'%}">Login</a></li>
+              <li><a href="{% url 'register'%}">Register</a></li>
+              <li><a href="{% url 'contact'%}">Contact Us</a></li>
             </ul>
           </div>
 
@@ -255,7 +255,7 @@
             <h6>About</h6>
             <ul>
               <li><a href="#">Our Story</a></li>
-              <li><a href="#">Benefits</a></li>
+              <li><a href="{% url 'blog-home'%}">Daily Alerts</a></li>
               <li><a href="#">Team</a></li>
               <li><a href="#">Careers</a></li>
             </ul>
@@ -325,25 +325,20 @@
     background-position: center;
     background-size: cover;
     opacity: 0.9;
-  }
-  .global .curve {
-    position: absolute;
-    top: 159%;
-    background: #000;
-    opacity: 0.2;
-    width: 90%;
-    height: 38%;
-    border-top-right-radius: 100px;
-    border-bottom-left-radius: 100px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
   }
   .global h6 {
     margin-top: 0;
     margin-bottom: 12px;
     font-weight: 700;
     font-size: 18px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: 1px;
   }
+
   .global ul {
     list-style-type: none;
     line-height: 30px;
