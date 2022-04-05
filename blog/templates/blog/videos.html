@@ -30,15 +30,19 @@
 
       
       
-
+     
       <div id="delete">
       <h3 class="text-center mt-2 mb-2">{{x.caption}}</h3>
+      <div class="px-3 mb-5">
       <video 
         class="embed-responsive embed-responsive-16by9"
         controls="controls"
       >
-        <source src="{{x.video.url}}" type="video/mp4" "426 * 240 "/>
+      
+        <source src="{{x.video.url}}" type="video/mp4"/>
+      
       </video>
+    </div>
       <p>{{x.description}}</p>
       <button onclick="myFunction()">Remove</button>
       <div>

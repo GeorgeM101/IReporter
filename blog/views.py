@@ -9,6 +9,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.shortcuts import render, HttpResponse, redirect
 from .forms import Video_form
 from .models import Video
+from django.core.mail import send_mail, BadHeaderError
+from django.conf import settings
 
 
 # def home(request):
@@ -38,7 +40,7 @@ class PostDetailView(LoginRequiredMixin, DetailView):
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
-    fields = ['title', 'content']
+    fields = ['title', 'content', ]
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -53,7 +55,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post
-    fields = ['title', 'content']
+    fields = ['title', 'content', ]
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -90,3 +92,20 @@ def video(request):
     else:
         form = Video_form()
     return render(request, 'blog/videos.html', {"form": form, "all": all_video})
+
+
+def success(request):
+    return render(request, 'success.html')
+
+
+def contact(request):
+
+    if request.method == 'POST':
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+        email = request.POST.get('email')
+        send_mail(subject, message, settings.EMAIL_HOST_USER,
+                  [email], fail_silently=False)
+        return render(request, 'blog/success.html', {'email': email})
+
+    return render(request, 'blog/contact.html', {})

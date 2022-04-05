@@ -10,16 +10,40 @@
       <a class="mr-2" href="#">{{ posts.author }}</a>
       <small class="text-muted">{{ posts.date_posted }}</small>
     </div>
+
     <h2>
       <a class="article-title" href="{% url 'blog-detail' posts.id %}"
         >{{ posts.title }}</a
       >
     </h2>
     <p class="article-content">{{ posts.content }}</p>
+    <h5>GET LOCATION CORDINATES</h5>
+
+    <button onclick="getPostion()">Get Location</button>
+    <p id="loc"></p>
   </div>
   <br />
 </article>
+
 {% endfor %} {% endblock content %}
+<script>
+  var location = document.getElementById("loc");
+  function getPostion() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      location.innerHTML = "location not supported";
+    }
+  }
+
+  function showPosition(position) {
+    location.innerHTML =
+      "Latitude: " +
+      position.coords.latitude +
+      "<br>Longitude: " +
+      position.coords.longitude;
+  }
+</script>
 
 <style>
   * {
