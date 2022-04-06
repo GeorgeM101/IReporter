@@ -104,6 +104,7 @@ def contact(request):
         subject = request.POST.get('subject')
         message = request.POST.get('message')
         email = request.POST.get('email')
+        firstname = request.POST.get('firstname')
         send_mail(subject, message, settings.EMAIL_HOST_USER,
                   [email], fail_silently=False)
         return render(request, 'blog/success.html', {'email': email})
