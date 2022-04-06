@@ -21,16 +21,19 @@
             {% csrf_token %}
             <div class="form-group">
               <label for="exampleInputEmail1">Subject</label>
-              <input type="text" name="subject" class="form-control" />
+              <input type="text" name="subject" class="form-control" required />
             </div>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Message</label>
-              <input type="text" name="message" class="form-control" />
-            </div>
+
             <div class="form-group">
               <label for="exampleInputEmail1">Email</label>
-              <input type="email" name="email" class="form-control" />
+              <input type="email" name="email" class="form-control" required />
             </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Message</label>
+              <input type="text" name="message" class="form-control" required />
+            </div>
+
             <button type="submit" class="btn btn-primary">Send</button>
           </form>
         </div>
@@ -39,3 +42,13 @@
     </div>
   </body>
 </html>
+
+<style>
+  body {
+    background-image: url("https://img.freepik.com/free-photo/mid-century-modern-living-room-interior-design-with-monstera-tree_53876-129804.jpg?w=900");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>
