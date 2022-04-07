@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config
+
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -150,9 +152,9 @@ MEDIA_URL = '/media/'
 
 
 # Email setup
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'  # new
-EMAIL_HOST_USER = 'clintonmakosh72@gmail.com'  # new
-EMAIL_HOST_PASSWORD = 'clinton62'
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
+EMAIL_BACKEND = config('EMAIL_BACKEND')
+EMAIL_HOST = config('EMAIL_HOST')  # new
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')  # new
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = config('EMAIL_USE_TLS')
+EMAIL_PORT = config('EMAIL_PORT')
