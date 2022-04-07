@@ -1,4 +1,7 @@
 {% extends 'blog/base.html' %} {% block content %} {% for posts in posts %}
+
+
+{% load static %}
 <article class="media content-section">
   <img
     class="rounded-cirlce article-img"
@@ -26,24 +29,6 @@
 </article>
 
 {% endfor %} {% endblock content %}
-<script>
-  var location = document.getElementById("loc");
-  function getPostion() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-      location.innerHTML = "location not supported";
-    }
-  }
-
-  function showPosition(position) {
-    location.innerHTML =
-      "Latitude: " +
-      position.coords.latitude +
-      "<br>Longitude: " +
-      position.coords.longitude;
-  }
-</script>
 
 <style>
   * {
