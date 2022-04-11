@@ -4,7 +4,7 @@
     {% csrf_token %}
     <fieldset class="form-group">
       <legend class="border-bottom mb-4">
-        Thanks you are welcome!!{{user.username}}
+        Thanks you are welcome Again!!{{user.username}}
       </legend>
       <h4>You just logged out</h4>
     </fieldset>
@@ -14,8 +14,6 @@
       </button>
     </div>
   </form>
-  <!--        <div class="border-top pt-3">-->
-  <!--            <small class="text-muted">Do you need an account? <a href="{% url 'register' %}">Register Now</a></small>-->
-  <!--        </div>-->
+  
 </div>
 {% endblock content %}

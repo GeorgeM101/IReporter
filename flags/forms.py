@@ -7,7 +7,7 @@ from flags.models import UserProfile
 class UserProfileForm(forms.ModelForm):
 
 	telephone = forms.CharField(max_length=15, required=True,
-		widget=forms.TextInput(attrs={'placeholder': '*Telephone..'}))
+	widget=forms.TextInput(attrs={'placeholder': '*Telephone..'}))
 	address = forms.CharField(max_length=100, required=True,)
 	town = forms.CharField(max_length=100, required=True,)
 	county = forms.CharField(max_length=100, required=True,)

@@ -11,7 +11,7 @@ from .forms import Video_form
 from .models import Video
 from django.core.mail import send_mail, BadHeaderError
 from django.conf import settings
-
+import folium
 
 # def home(request):
 #     context = {
