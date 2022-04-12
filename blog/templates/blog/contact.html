@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Form</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <h1>Contact-Us</h1>
+          <hr />
+          <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="exampleInputEmail1">Subject</label>
+              <input type="text" name="subject" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Firstname</label>
+              <input
+                type="firstname"
+                name="firstname"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email</label>
+              <input type="email" name="email" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Message</label>
+              <input type="text" name="message" class="form-control" required />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+
+    <div class="global">
+      <div class="curve"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-3">
+            <h6>IReporter</h6>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+
+          <div class="col-sm-6 col-md-2">
+            <h6>IReporter & Services</h6>
+            <ul>
+              <li><a href="{% url 'blog-home' %}">Home</a></li>
+              <li><a href="{% url 'login' %}">Login</a></li>
+              <li><a href="{% url 'register' %}">Register</a></li>
+              <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-sm-6 col-md-2">
+            <h6>About</h6>
+            <ul>
+              <li><a href="{% url 'blog-home' %}">Our Story</a></li>
+              <li><a href="{% url 'blog-home' %}">Daily Alerts</a></li>
+              <li><a href="{% url 'blog-home' %}">Team</a></li>
+              <li><a href="{% url 'blog-home' %}">Careers</a></li>
+            </ul>
+          </div>
+
+          <div class="col-sm-6 col-md-2">
+            <h6>Legal</h6>
+            <ul>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of use</a></li>
+            </ul>
+          </div>
+
+          <div class="social">
+            <h6>Follow us</h6>
+            <a href="#"><i class="fa fa-facebook"></i> </a>
+            <a href="#"><i class="fa fa-twitter"></i> </a>
+            <a href="#"><i class="fa fa-snapchat-ghost"></i> </a>
+            <a href="#"><i class="fa fa-instagram"></i> </a>
+            <a href="#"><i class="fa fa-google-plus"></i> </a>
+          </div>
+        </div>
+        <p class="copyright">&copy;2022 Copyright All rights reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+  body {
+    background-image: url("https://img.freepik.com/free-photo/mid-century-modern-living-room-interior-design-with-monstera-tree_53876-129804.jpg?w=900");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+  html,
+  body {
+    font-family: "Lato", sans-serif;
+  }
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .global {
+    top: 120%;
+    width: 100vw;
+    position: absolute;
+    padding: 50px;
+    color: #f0f9ff;
+    margin-top: 80px;
+    background: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.9;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  .global h6 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+  }
+
+  .global ul {
+    list-style-type: none;
+    line-height: 30px;
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+  .global ul a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .global ul a:hover {
+    opacity: 0.8;
+    color: #eee;
+  }
+  .global .social {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+    padding-bottom: 0px;
+    border-top: 1px solid #eee;
+    margin-top: 50px;
+  }
+  .global .social a {
+    font-size: 22px;
+    width: 45px;
+    height: 45px;
+    line-height: 39px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid #05ff05;
+    box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.4);
+    margin: 10px;
+    color: #fff;
+    opacity: 0.7;
+    transition: 0.3s ease-in-out;
+  }
+  .global .social a:hover {
+    opacity: 0.9;
+    box-shadow: 0px 1px 3px 2px rgba(255, 255, 255, 0.9);
+  }
+  .global .copyright {
+    text-align: center;
+    padding-top: 24px;
+    font-weight: 500;
+    opacity: 0.8;
+    font-size: 16px;
+  }
+  @media (max-width: 767px) {
+    .global .curve {
+      left: 5%;
+      height: 70%;
+    }
+    .global h6 {
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .global ul {
+      text-align: center;
+    }
+    .social {
+      margin: 0 auto;
+    }
+  }
+</style>
